@@ -1,0 +1,13 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "shift+alt+enter",
+        "command": "python.execInTerminal-icon",
+    },
+    {
+        "key": "shift+alt+b",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {"text": "cd \"${fileDirname}\" ; .\\\"${fileBasenameNoExtension}.exe\" \u000D"},
+        "when": "editorTextFocus"
+    }
+]
