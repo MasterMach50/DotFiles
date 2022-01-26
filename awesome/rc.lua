@@ -22,9 +22,6 @@ require("awful.hotkeys_popup.keys")
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
--- awesome-wm-widgets
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)

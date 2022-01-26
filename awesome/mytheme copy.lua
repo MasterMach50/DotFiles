@@ -72,8 +72,8 @@ theme.menu_width  = dpi(150) --100
 --theme.bg_widget = "#cc0000"
 
 -- Define the image to load
-theme.titlebar_close_button_normal = custom_theme_path.."titlebar/close_focus.png"
-theme.titlebar_close_button_focus  = custom_theme_path.."titlebar/close_focus.png"
+theme.titlebar_close_button_normal = themes_path.."default/titlebar/close_normal.png"
+theme.titlebar_close_button_focus  = themes_path.."default/titlebar/close_focus.png"
 
 theme.titlebar_minimize_button_normal = themes_path.."default/titlebar/minimize_normal.png"
 theme.titlebar_minimize_button_focus  = themes_path.."default/titlebar/minimize_focus.png"
@@ -93,10 +93,10 @@ theme.titlebar_floating_button_focus_inactive  = themes_path.."default/titlebar/
 theme.titlebar_floating_button_normal_active = themes_path.."default/titlebar/floating_normal_active.png"
 theme.titlebar_floating_button_focus_active  = themes_path.."default/titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = custom_theme_path.."titlebar/maximized_normal_inactive.png"
-theme.titlebar_maximized_button_focus_inactive  = custom_theme_path.."titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_active = custom_theme_path.."titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_active  = custom_theme_path.."titlebar/maximized_focus_active.png"
+theme.titlebar_maximized_button_normal_inactive = themes_path.."default/titlebar/maximized_normal_inactive.png"
+theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar/maximized_focus_inactive.png"
+theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
+theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
 theme.wallpaper = "/home/mathew/.config/awesome/res/backgrounds/snowy_mountains.jpg"
 
@@ -125,7 +125,7 @@ theme.awesome_icon = theme_assets.awesome_icon(
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
-theme.icon_theme = "~/.local/share/icons/Tela"
+theme.icon_theme = "~/.local/share/icons/Tela-dark"
 
 return theme
 
