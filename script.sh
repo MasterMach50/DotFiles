@@ -1,29 +1,29 @@
 #!/bin/bash
 
 #prepare system
-echo \n=========================
+echo =========================
 echo Preparing System
-echo =========================\n
+echo =========================
 sudo apt update
 sudo upgrade
 
 #install mains
-echo \n=========================
+echo =========================
 echo Installing Environment
-echo =========================\n
+echo =========================
 sudo apt install -y compton awesome rofi polybar
 
 #install tools
-echo \n=========================
+echo =========================
 echo Installing Tools
-echo =========================\n
+echo =========================
 sudo apt install -y neofetch neovim python3-pip git wget
 sudo pip3 install pywal colorz
 
 #programs
-echo \n=========================
+echo =========================
 echo Installing Programs
-echo =========================\n
+echo =========================
 sudo mkdir ~/Documents/setup-temp
 sudo wget https://zoom.us/client/latest/zoom_amd64.deb -O ~/Documents/setup-temp/zoom_amd64.deb
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ~/Documents/setup-temp/google-chrome-stable_current_amd64.deb
@@ -31,16 +31,16 @@ sudo dpkg -i ~/Documents/setup-temp/zoom_amd64.deb ~/Documents/setup-temp/google
 
 
 #configuration
-echo \n=========================
+echo =========================
 echo Configuring 
-echo =========================\n
+echo =========================
 sudo mkdir ~/Documents/setup-temp/DotFiles
 sudo git clone https://github.com/MasterMach50/DotFiles.git ~/Documents/setup-temp/DotFiles
 sudo cp -r ~/Documents/setup-temp/DotFiles/Ubuntu/. ~/.config
 
 #final
-echo \n=========================
+echo =========================
 echo Finishing Up
-echo =========================\n
+echo =========================
 sudo rm -rf ~/Documents/setup-temp/DotFiles
 sudo apt autoremove
