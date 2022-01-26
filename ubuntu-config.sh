@@ -17,7 +17,7 @@ sudo apt install -y compton awesome rofi polybar
 echo =========================
 echo Installing Tools
 echo =========================
-sudo apt install -y neofetch neovim python3-pip git wget
+sudo apt install -y neofetch neovim python3-pip git wget openssh-server
 sudo pip3 install pywal colorz
 
 #programs
