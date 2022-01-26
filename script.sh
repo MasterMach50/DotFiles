@@ -1,44 +1,46 @@
 #!/bin/bash
 
 #prepare system
-echo =========================
+echo \n=========================
 echo Preparing System
-echo =========================
+echo =========================\n
 sudo apt update
 sudo upgrade
 
 #install mains
-echo =========================
+echo \n=========================
 echo Installing Environment
-echo =========================
-sudo apt install compton awesome rofi polybar
+echo =========================\n
+sudo apt install -y compton awesome rofi polybar
 
 #install tools
-echo =========================
+echo \n=========================
 echo Installing Tools
-echo =========================
-sudo apt install neofetch neovim python3-pip git wget
+echo =========================\n
+sudo apt install -y neofetch neovim python3-pip git wget
 sudo pip3 install pywal colorz
 
 #programs
-echo =========================
+echo \n=========================
 echo Installing Programs
-echo =========================
-mkdir ~/Documents/setup-temp
-wget https://zoom.us/client/latest/zoom_amd64.deb -O ~/Documents/setup-temp/zoom_amd64.deb
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ~/Documents/setup-temp/google-chrome-stable_current_amd64.deb
-dpkg -i ~/Documents/setup-temp/zoom_amd64.deb ~/Documents/setup-temp/google-chrome-stable_current_amd64.deb
+echo =========================\n
+sudo mkdir ~/Documents/setup-temp
+sudo wget https://zoom.us/client/latest/zoom_amd64.deb -O ~/Documents/setup-temp/zoom_amd64.deb
+sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ~/Documents/setup-temp/google-chrome-stable_current_amd64.deb
+sudo dpkg -i ~/Documents/setup-temp/zoom_amd64.deb ~/Documents/setup-temp/google-chrome-stable_current_amd64.deb
+
 
 #configuration
-echo =========================
+echo \n=========================
 echo Configuring 
-echo =========================
-mkdir ~/Documents/setup-temp/DotFiles
-git clone https://github.com/MasterMach50/DotFiles.git ~/Documents/setup-temp/DotFiles
-cp -r ~/Documents/setup-temp/DotFiles/. ~/.config
+echo =========================\n
+sudo mkdir ~/Documents/setup-temp/DotFiles
+sudo git clone https://github.com/MasterMach50/DotFiles.git ~/Documents/setup-temp/DotFiles
+sudo cp -r ~/Documents/setup-temp/DotFiles/. ~/.config
 
 #final
-echo =========================
+echo \n=========================
 echo Finishing Up
-echo =========================
+echo =========================\n
+sudo rm -rf ~/Documents/setup-temp/DotFiles
 sudo apt autoremove
