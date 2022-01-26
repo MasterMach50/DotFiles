@@ -309,7 +309,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey, "Mod1"},            "space",     function () awful.spawn("rofi -show run") end,
+    awful.key({ modkey, altkey},            "space",     function () awful.spawn("rofi -show run") end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -376,7 +376,9 @@ clientkeys = gears.table.join(
     awful.key({ modkey,  }, "Down", function (c) awful.spawn.with_shell("amixer -D pulse sset Master 5%-") end,
               {description = "Decrease Volume", group = "Custom"}),
     awful.key({          }, "Print", function (c) awful.spawn.with_shell("gnome-screenshot") end,
-              {description = "Take a screenshot", group = "Custom"})
+              {description = "Take a screenshot", group = "Custom"}),
+    awful.key({ modkey, altkey}, "w", function (c) awful.spawn.with_shell("rofi -show window") end,
+              {description = "Open window switcher", group = "Custom"})
             )
 -- }}}
 
