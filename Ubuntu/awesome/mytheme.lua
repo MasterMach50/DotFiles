@@ -1,6 +1,6 @@
----------------------------
--- Default awesome theme --
----------------------------
+------------------------------
+-- Mathew's AwesomeWM Theme --
+------------------------------
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
@@ -12,7 +12,7 @@ local custom_theme_path = "~/.config/awesome/res/mytheme/"
 
 local theme = {}
 
-theme.font          = "sans 10"
+theme.font          = "Ubuntu Mono 11.5"
 
 theme.bg_normal     = "#6e6e6e" --default "#222222"
 theme.bg_focus      = "#222222" --default "#535d6c"
@@ -98,7 +98,7 @@ theme.titlebar_maximized_button_focus_inactive  = custom_theme_path.."titlebar/m
 theme.titlebar_maximized_button_normal_active = custom_theme_path.."titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = custom_theme_path.."titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/mathew/.config/awesome/res/backgrounds/snowy_mountains.jpg"
+theme.wallpaper = "/home/mathew/.config/awesome/res/backgrounds/snowy_evergreen_mountains.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
@@ -125,7 +125,7 @@ theme.awesome_icon = theme_assets.awesome_icon(
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
-theme.icon_theme = "~/.local/share/icons/Tela"
+theme.icon_theme = "/usr/share/icons/symbolic"
 
 return theme
 
