@@ -43,5 +43,7 @@ echo =========================
 echo Finishing Up
 echo =========================
 sudo rm -rf ~/Documents/setup-temp/DotFiles
+sudo rmdir ~/Documents/setup-temp
 sudo chmod +x ~/.config/polybar/launch.sh
+sudo chown $USER ~/.config -R
 sudo apt autoremove
