@@ -36,7 +36,8 @@ echo Configuring
 echo =========================
 sudo mkdir ~/Documents/setup-temp/DotFiles
 sudo git clone https://github.com/MasterMach50/DotFiles.git ~/Documents/setup-temp/DotFiles
-sudo cp -r ~/Documents/setup-temp/DotFiles/Ubuntu/. ~/.config
+sudo cp -r ~/Documents/setup-temp/DotFiles/Ubuntu/.config/. ~/.config
+sudo cp ~/Documents/setup-temp/DotFiles/Ubuntu/.bashrc ~
 
 #final
 echo =========================

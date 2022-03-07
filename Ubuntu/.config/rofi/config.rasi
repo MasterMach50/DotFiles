@@ -2,15 +2,15 @@
 
 * {
     font: "Ubuntu Mono 13";
-    foreground: #f8f8f2;
+    foreground: #FFFFFF;
     background-color: #222222;
-    active-background: #6272a4;
+    active-background: #6F8DD2;
     urgent-background: #ff5555;
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
     separatorcolor: @active-background;
-    bordercolor: #6272a4;
+    bordercolor: #5D669D;
 }
 
 #window {
