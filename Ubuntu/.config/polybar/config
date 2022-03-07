@@ -25,16 +25,16 @@ background-alt = #444
 foreground = #ffffff
 foreground-alt = #555
 primary = #ffb52a
-secondary = #6F8DD2
+secondary = ${file:~/.cache/wal/color_saves/color6.txt}
 alert = #bd2c40
 
 [u_line]
 
-ram = #4C4C72
-cpu = #3E5F9D
-battery = #5D669D
-temperature = #8677AF
-clock = #7685AC
+ram = ${file:~/.cache/wal/color_saves/color1.txt}
+cpu = ${file:~/.cache/wal/color_saves/color2.txt}
+battery = ${file:~/.cache/wal/color_saves/color3.txt}
+temperature = ${file:~/.cache/wal/color_saves/color4.txt}
+clock = ${file:~/.cache/wal/color_saves/color5.txt}
 
 wlan = #9f78e1
 eth = #55aa55
