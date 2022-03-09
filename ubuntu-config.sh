@@ -17,7 +17,7 @@ sudo apt install -y compton awesome rofi polybar
 echo =========================
 echo Installing Tools
 echo =========================
-sudo apt install -y neofetch neovim python3-pip git wget openssh-server
+sudo apt install -y neofetch neovim python3-pip git wget openssh-server terminator
 sudo pip3 install pywal colorz
 
 #programs
@@ -47,4 +47,6 @@ sudo rm -rf ~/Documents/setup-temp/DotFiles
 sudo rmdir ~/Documents/setup-temp
 sudo chmod +x ~/.config/polybar/launch.sh
 sudo chown $USER ~/.config -R
+sudo chown $USER ~/.bashrc
+sudo chown $USER ~/.gitconfig
 sudo apt autoremove

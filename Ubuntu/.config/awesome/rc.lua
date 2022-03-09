@@ -1,3 +1,7 @@
+-------------------------------
+-- Mathew's AwesomeWM Config --
+-------------------------------
+
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -125,9 +129,6 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
--- Create a textclock widget
-mytextclock = wibox.widget.textclock()
-
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -291,9 +292,9 @@ globalkeys = gears.table.join(
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1) end,
               {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc( -1) end,
               {description = "select previous", group = "layout"}),
 
     awful.key({ modkey, "Control" }, "n",
@@ -370,7 +371,7 @@ clientkeys = gears.table.join(
         end ,
         {description = "(un)maximize horizontally", group = "client"}),
         
-        
+    -- Custom Bindings
     awful.key({ modkey,  }, "Up", function (c) awful.spawn.with_shell("amixer -D pulse sset Master 5%+") end,
               {description = "Increase Volume", group = "Custom"}),
     awful.key({ modkey,  }, "Down", function (c) awful.spawn.with_shell("amixer -D pulse sset Master 5%-") end,
@@ -380,7 +381,6 @@ clientkeys = gears.table.join(
     awful.key({ modkey, altkey}, "w", function (c) awful.spawn.with_shell("rofi -show window") end,
               {description = "Open window switcher", group = "Custom"})
             )
--- }}}
 
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout.
@@ -572,7 +572,18 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
--- Custom=========================================
+-- Custom
+tag.connect_signal("property::layout",
+    function(t)
+        if ntf then naughty.destroy(ntf) end
+        ntf = naughty.notify({
+            title = "Layout Changed",
+            text = awful.layout.getname(),
+            timeout = 2})
+    end)
+-- }}}
+
+-- {{{ Startup
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("~/.config/polybar/launch.sh")
