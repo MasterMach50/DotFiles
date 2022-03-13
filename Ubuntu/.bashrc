@@ -116,4 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#Custom Aliases
+alias sapt='sudo apt'
+
 wal -e -t -n -q -R
