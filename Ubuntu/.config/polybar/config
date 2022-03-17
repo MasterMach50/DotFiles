@@ -44,6 +44,8 @@ vol_mid = #f5a70a
 vol_high = #ff5555
 
 [bar/mathew]
+enable-ipc = true 
+
 width = 100%
 height = 22
 fixed-center = false

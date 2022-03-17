@@ -118,5 +118,8 @@ fi
 
 #Custom Aliases
 alias sapt='sudo apt'
+alias tinton='tint -l 3 -n'
+alias nf='neofetch'
+alias cls='clear'
 
 wal -e -t -n -q -R
