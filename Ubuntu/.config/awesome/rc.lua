@@ -581,7 +581,19 @@ tag.connect_signal("property::layout",
             text = awful.layout.getname(),
             timeout = 2})
     end)
--- }}}
+
+tag.connect_signal("property::selected",
+    function(t)
+    	if awful.tag.selected() then
+			if ntf then naughty.destroy(ntf) end
+			ntf = naughty.notify({
+				title = "Tag Switched",
+				text = awful.tag.selected().name,
+				timeout = 2})
+			first = true
+		end
+    end)
+--}}}
 
 -- {{{ Startup
 awful.spawn.with_shell("compton")
