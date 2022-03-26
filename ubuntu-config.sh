@@ -17,7 +17,7 @@ sudo apt install -y compton awesome rofi polybar
 echo =========================
 echo Installing Tools
 echo =========================
-sudo apt install -y neofetch neovim python3-pip git wget openssh-server terminator
+sudo apt install -y neofetch neovim python3-pip git wget openssh-server terminator imagemagick
 sudo pip3 install pywal colorz
 
 #programs
@@ -51,5 +51,7 @@ sudo chown mathew /home/mathew/.gitconfig
 
 #change mode of scripts
 sudo chmod +x /home/mathew/.config/polybar/launch.sh
+
+sudo apt --fix-broken install
 
 sudo apt autoremove
