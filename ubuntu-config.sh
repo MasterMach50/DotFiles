@@ -51,7 +51,12 @@ sudo chown mathew /home/mathew/.gitconfig
 
 #change mode of scripts
 sudo chmod +x /home/mathew/.config/polybar/launch.sh
-
 sudo apt --fix-broken install
+
+#set themes
+wal -c
+wal -i /home/mathew/.config/awesome/res/backgrounds/snowy_evergreen_mountains.jpg
+python3 /home/mathew/.config/polybar/colour_finder.pyw
+/home/mathew/.config/polybar/launch.sh
 
 sudo apt autoremove
