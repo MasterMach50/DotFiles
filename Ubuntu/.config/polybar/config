@@ -36,8 +36,8 @@ battery = ${file:~/.cache/wal/color_saves/color3.txt:#5D669D}
 temperature = ${file:~/.cache/wal/color_saves/color4.txt:#8677AF}
 clock = ${file:~/.cache/wal/color_saves/color5.txt:#7685AC}
 
-wlan = #9f78e1
-eth = #55aa55
+wlan = ${file:~/.cache/wal/color_saves/color6.txt:#6F8DD2}
+eth = ${file:~/.cache/wal/color_saves/color7.txt:#c8cfde}
 
 vol_low = #C8CFDE
 vol_mid = #f5a70a
@@ -67,7 +67,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = awesome powermenu
-modules-right = pulseaudio memory cpu wlan eth battery temperature date
+modules-right = pulseaudio memory cpu eth battery temperature wlan date
 
 tray-position = right
 tray-padding = 2
@@ -99,10 +99,10 @@ label = ram %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp59s0
+interface = wlp2s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected>
 format-connected-underline = ${u_line.wlan}
 label-connected = %essid%
 
@@ -218,7 +218,7 @@ warn-temperature = 60
 
 format = <label>
 format-underline = ${u_line.temperature}
-format-warn = <ramp> <label-warn>
+format-warn = <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
@@ -234,7 +234,6 @@ ramp-foreground = ${colors.foreground-alt}
 type = custom/menu
 
 expand-right = true
-
 format-spacing = 1
 
 label-open = {#}
@@ -250,7 +249,7 @@ menu-0-1 = reboot
 menu-0-1-exec = menu-open-2
 
 menu-1-0 = shutdown
-menu-1-0-exec = poweroff --poweroff
+menu-1-0-exec = poweroff -p
 menu-1-1 = cancel
 menu-1-1-exec = menu-open-0
 

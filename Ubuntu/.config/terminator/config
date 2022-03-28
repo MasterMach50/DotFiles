@@ -1,4 +1,7 @@
 [global_config]
+  suppress_multiple_term_dialog = True
+  title_use_system_font = False
+  title_font = Ubuntu Mono 9
 [keybindings]
 [profiles]
   [[default]]

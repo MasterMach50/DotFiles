@@ -1,0 +1,6 @@
+# Mathew's youtube-dl config
+
+--rm-cache-dir
+-o "~/Videos/%(title)s - %(resolution)s - %(id)s.%(ext)s"
+--add-metadata
+--no-part
