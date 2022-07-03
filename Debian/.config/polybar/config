@@ -81,6 +81,10 @@ type = custom/text
 content = awesome
 click-left = echo "mymainmenu:toggle()" | awesome-client
 
+[module/ipc-ctrl]
+type = custom/ipc
+hook-0 = awesome.content = hey
+
 [module/cpu]
 type = internal/cpu
 interval = 3
@@ -249,7 +253,7 @@ menu-0-1 = reboot
 menu-0-1-exec = menu-open-2
 
 menu-1-0 = shutdown
-menu-1-0-exec = poweroff -p
+menu-1-0-exec = poweroff
 menu-1-1 = cancel
 menu-1-1-exec = menu-open-0
 

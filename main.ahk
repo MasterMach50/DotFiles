@@ -10,12 +10,9 @@
 
 ; {{{ Application Specific Hotkeys }}}
 ; NumPad Plus        =  Add New Scan While Scanning (HP Smart)
-; Middle Mouse       =  Go Home (Blue Stacks)
-; Right Mouse        =  Go Back (Blue Stacks)
 
 ; {{{ Secret Words }}} (AppsKey + <word>)
-; ng              =  Play Updated Nightcore Galaxy Playlist on VLC
-; zoom            =  Open Zoom
+; ngvlc              =  Play Updated Nightcore Galaxy Playlist on VLC
 
 ; Made by Mathew Manoj
 
@@ -25,17 +22,9 @@ CoordMode, Mouse, Screen
 CoordMode, ToolTip, Screen
 CoordMode, Pixel, Screen
 
-; Announce something via tooltip
-Announce(msg){
-    ToolTip, %msg%
-    Sleep, 1500
-    ToolTip
-}
-
-; {{{ System Wide Hotkeys
 ; Open Windows Termianl
 #Enter::
-    RunWait, wt.exe
+    Run, wt.exe
     Return
 
 ; Increase Volume
@@ -62,17 +51,10 @@ Announce(msg){
 !+p::
     SendInput, {Media_Prev}
     Return
-; }}}
 
-; {{{ Application Specific Hotkeys
 ; Add New Scan In HP Smart
 #IfWinActive HP Smart
 NumpadAdd::
-    WinMaximize
-    WinGetPos, X, Y, W, H, HP Smart
-    if (Y > -1) {
-        SendInput, #+{Right}
-    }
     Click, left, 1850, 160
     Pxc1 = 0
     Loop, 100 {
@@ -85,32 +67,9 @@ NumpadAdd::
     }
     Return
 
-; Go Home In Bluestacks
-#IfWinActive ahk_exe HD-Player.exe
-MButton::
-    SendInput, ^+1
-    Return
-
-; Go Back In Bluestacks
-RButton::
-    SendInput, ^+2
-    Return
-
-#If
-; }}}
-
-; {{{ Secret Words
 ; Play Updated Nightcore Galaxy Playlist on VLC
-#if GetKeyState("AppsKey") ; applies till another if statement
-:*:ng::
+#if GetKeyState("AppsKey")
+:*:ngvlc::
     RunWait, D:\Manoj\Documents\Code\Python\Scripts\linkloaderforng.py
     Run, vlc C:\\Users\\Manoj\\Desktop\\Nightcore_Galaxy.xspf
-    Announce("Playing Nightcore Galaxy")
     Return
-
-; Open Zoom
-:*:zoom::
-    Run, C:\Users\Manoj\AppData\Roaming\Zoom\bin\Zoom.exe
-    Announce("Launched Zoom")
-    Return
-; }}}

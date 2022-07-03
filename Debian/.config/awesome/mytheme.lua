@@ -14,7 +14,7 @@ local theme = {}
 
 theme.font          = "Ubuntu Mono 11.5"
 
-theme.bg_normal     = "#C8CFDE"
+theme.bg_normal     = "#C3C4A3" --"#C8CFDE"
 theme.bg_focus      = "#222222"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
@@ -63,8 +63,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
-theme.menu_height = dpi(25) --15
-theme.menu_width  = dpi(150) --100
+theme.menu_height = dpi(30) --15
+theme.menu_width  = dpi(160) --100
 
 -- You can add as many variables as
 -- you wish and access them by using
@@ -98,7 +98,7 @@ theme.titlebar_maximized_button_focus_inactive  = custom_theme_path.."titlebar/m
 theme.titlebar_maximized_button_normal_active = custom_theme_path.."titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = custom_theme_path.."titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/mathew/.config/awesome/res/backgrounds/snowy_evergreen_mountains.jpg"
+theme.wallpaper = "/home/mathew/.config/common-res/train_bridge.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

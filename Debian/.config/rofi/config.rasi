@@ -4,13 +4,13 @@
     font: "Ubuntu Mono 13";
     foreground: #FFFFFF;
     background-color: #222222;
-    active-background: #6F8DD2;
+    active-background: #949536;
     urgent-background: #ff5555;
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
     separatorcolor: @active-background;
-    bordercolor: #5D669D;
+    bordercolor: #c3c4a3;
 }
 
 #window {

@@ -1,3 +1,4 @@
+#!/etc/python3
 import os
 import json
 

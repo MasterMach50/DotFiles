@@ -1,4 +1,4 @@
-# Mathew's youtube-dl config
+# Mathew's yt-dlp config
 
 --rm-cache-dir
 -o "~/Videos/%(title)s - %(resolution)s - %(id)s.%(ext)s"
